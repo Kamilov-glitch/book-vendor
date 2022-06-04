@@ -7,11 +7,14 @@
     <title>Book Vendor</title>
 </head>
 <body>
-    <form action="/books" method="POST">
+    <form action="/home" method="POST">
+        @csrf
         <label for="name">Name</label>
-        <input type="text">
+        <input type="text" name="name">
         <label for="description">Description</label>
-        <textarea name="description" id="textArea"></textarea>
+        <textarea name="description" id="textArea" name="description"></textarea>
+        <label for="price" >Price</label>
+        <input type="number" name="price" step="0.01">
         <button>Add Book</button>
     </form>
 </body>

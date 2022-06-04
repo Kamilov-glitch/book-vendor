@@ -24,5 +24,8 @@ class BookController extends Controller
         $book->description = $request['description'];
         $book->price = $request['price'];
         // $book->user_id = Auth::user()->id;
+        $book->save();
+
+        return redirect('/home');
     }
 }
