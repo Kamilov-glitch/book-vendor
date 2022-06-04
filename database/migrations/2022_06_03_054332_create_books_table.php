@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->float('price');
             $table->text('description');
-            $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('user_id');
 
             $table->timestamps();
         });
