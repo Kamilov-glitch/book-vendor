@@ -26,6 +26,6 @@ class BookController extends Controller
         // $book->user_id = Auth::user()->id;
         $book->save();
 
-        return redirect('/home');
+        return redirect('/books');
     }
 }
