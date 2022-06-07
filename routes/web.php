@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,10 @@ Route::get('/', function () {
     return view('/books/books');
 });
 
-Route::get('/home', [BookController::class, 'index'])->name('home');
+Route::get('/books', [BookController::class, 'index'])->name('books');
 Route::get('/books/create', [BookController::class, 'create']);
-Route::post('/home', [BookController::class, 'store']);
+Route::post('/books', [BookController::class, 'store']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
