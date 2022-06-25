@@ -3,10 +3,10 @@
 
 <div class="container">
     @foreach (App\Models\Book::all() as $book)
-        <div class="col-4 pb-3">
+        <div class="col-3 pb-3">
             <div class="card">
                 <div class="card-header">
-                    <img src="" alt="book image" class="card-img-top w-100">
+                    <img src="book_image_placeholder.png" alt="book image" class="card-img-top ms-5 pe-1 w-75">
                 </div>
                 <div class="card-body text-center">
                     <h5>{{ $book->name }}</h5>
